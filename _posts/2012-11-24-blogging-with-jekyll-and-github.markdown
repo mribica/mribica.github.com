@@ -3,8 +3,6 @@ layout: post
 title: "Blogging for hackers with Jekyll and github" 
 ---
 
-# Blogging for hackers with Jekyll and github
-
 ## Create github page
 
 Create github repository with name in this format **username.github.com**. In few minutes you will get mail that your github page is up and 
