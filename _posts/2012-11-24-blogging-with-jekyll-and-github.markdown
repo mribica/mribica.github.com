@@ -16,7 +16,8 @@ url username.github.com.
 
 ### Create basic jekyll directory structure
 
-~~~
+``` html
+
 |-- _config.yml
 |-- _includes
 /-- _plugins
@@ -27,13 +28,14 @@ url username.github.com.
 |   `-- 2012-11-24-my-first-post.markdown
 |-- _site
 `-- index.html
-~~~
+
+```
 
 ### Create layout for blog `_layouts/default.html`
 
 **_layouts/default.html**
 
-~~~html
+```html
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -43,7 +45,7 @@ url username.github.com.
     {{ "{{ content "}} }}
   </body>
 </html>
-~~~
+```
 
 ### Create layout for post
 
@@ -82,22 +84,6 @@ Blog homepage, let's add post listing
 </section>
 ~~~
 
-## Just some more configuration
-
-I prefer to use github flavored markdown, provided by with redcarpet, because fenced_code_blocks functionality.
-To enable this we have to use [redcarpet 2 plugin](https://github.com/nono/Jekyll-plugins).
-
-`gem install redcarpet`
-
-`~/mribica.github.com$ git submodule add https://github.com/nono/Jekyll-plugins _plugins/redcarpet2`
-
-Edit **_config.yml**
-
-~~~
-markdown: redcarpet2
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data"]
-~~~
 
 ## Write your first post
 
@@ -106,6 +92,13 @@ Create new post and save it to _post directory. The format of these files is imp
 `~/mribica.github.com$ jekyll --server`
 
 will generate your blog.
+
+
+## Add syntax hl
+
+gem 'rdiscount',
+gem 'pygments.rb',
+gem 'rubypants'
 
 
 

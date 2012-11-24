@@ -1,2 +1,4 @@
 _site/
+_plugins/_cache/
+.pygments-cache/
 *.sw*

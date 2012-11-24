@@ -1,12 +1,13 @@
-# Day 0
+---
+layout: default
+---
 
-This is first post for testing purposes. Now let's check code blocks
+``` ruby test
 
-## Redcarpet, github favored markdown
+class Fixnum
+  def prime?
+    ('1' * self) !~ /^1?$|^(11+?)\1+$/
+  end
+end
 
-~~~ruby
-puts "This is block of ruby code"
-~~~
-
-  This is block with tab indentation
-
+```
