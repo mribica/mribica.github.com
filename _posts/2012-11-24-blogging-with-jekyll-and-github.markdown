@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Blogging with Jekyll and github" 
+title: "Blogging for hackers with Jekyll and github" 
 ---
 
-# Blogging for with Jekyll and github
+# Blogging for hackers with Jekyll and github
 
 ## Create github page
 
