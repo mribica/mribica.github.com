@@ -1,0 +1,12 @@
+# Day 0
+
+This is first post for testing purposes. Now let's check code blocks
+
+## Redcarpet, github favored markdown
+
+~~~ruby
+puts "This is block of ruby code"
+~~~
+
+  This is block with tab indentation
+
