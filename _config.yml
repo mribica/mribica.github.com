@@ -1,2 +1,2 @@
 markdown: rdiscount
-pygments: false # default python pygments have been replaced by pygments.rb
+pygments: true
