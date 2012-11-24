@@ -85,7 +85,7 @@ Create new post and save it to _posts directory. The format of these file is imp
 
 **2012-11-24-my-first-post.markdown**
 
-{% highlight html linenos %}
+{% highlight markdown linenos %}
 ---
 layout: post
 title: "Blogging for hackers with Jekyll and github" 
