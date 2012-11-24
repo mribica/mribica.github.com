@@ -83,7 +83,23 @@ Blog homepage with post listing
 
 Create new post and save it to _posts directory. The format of these file is important, as named as YEAR-MONTH-DAY-title.MARKUP
 
-`~/mribica.github.com$ jekyll --server` will generate your blog. Now you can simply deploy it to github with gitpush.
+**2012-11-24-my-first-post.markdown**
+
+{% highlight html linenos %}
+---
+layout: post
+title: "Blogging for hackers with Jekyll and github" 
+---
+
+# This my first post
+
+Content for the first post
+
+{% endhighlight %}
+
+## Run and deploy
+
+`~/mribica.github.com$ jekyll --server` will generate your blog. Now you can simply deploy it to github page with gitpush.
 
 
 
