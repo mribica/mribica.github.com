@@ -81,7 +81,7 @@ Blog homepage with post listing
 
 ## Write your first post
 
-Create new post and save it to _posts directory. The format of these file is important, as named as YEAR-MONTH-DAY-title.MARKUP
+Create new post and save it to _posts directory. The format of these file is important, as named as `YEAR-MONTH-DAY-title.MARKUP`
 
 **2012-11-24-my-first-post.markdown**
 
