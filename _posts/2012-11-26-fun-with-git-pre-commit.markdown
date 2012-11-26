@@ -3,7 +3,7 @@ layout: post
 title: "Gitshoot, Fun with git post-commit hook and streamer" 
 ---
 
-For quite some time now I have this idea of creating collection of Gitshots. Basically, idea is to create git hook that will capture image 
+For quite some time now, I have this idea of creating collection of Gitshots. Basically, idea is to create git hook that will capture image 
 from webcam on every git commit. And here it is, Gitshot.
 
 ## Capture image from command line
