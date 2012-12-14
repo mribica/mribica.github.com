@@ -19,10 +19,9 @@ For this purpose I used streamer `streamer -c /dev/video0 -b 16 -o filename.jpeg
 
 `your-repository/.git/hooks/post-commit`
 
-{% highlight ruby linenos%}
+{% highlight ruby%}
 
 #!/usr/bin/env ruby
-
 puts "[Taking picture, Cheese!]"
 
 # Get some info about current commit
@@ -30,10 +29,9 @@ repository_name = `basename "$PWD"`.chop
 commit_hash, commit_date = `git log -1 --pretty="%H%n%ci"`.split(/\r?\n/)
 
 # Take picture and save it to ~/Pictures/gitshoots/REPOSITORYNAME-TIMESTAMP-COMMITHASH.jpeg
-
 exec "streamer -c /dev/video0 -b 16 -o ~/Pictures/gitshoots/#{repository_name}_#{commit_date.gsub!(' ', '_')}_#{commit_hash}.jpeg"
-
 exit 1
+
 {% endhighlight %}
 
 And finaly make this script executable `repository$ sudo chmod +x .git/hooks/pre-commit`
