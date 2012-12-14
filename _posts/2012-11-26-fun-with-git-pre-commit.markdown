@@ -17,7 +17,7 @@ For this purpose I used streamer `streamer -c /dev/video0 -b 16 -o filename.jpeg
 > In most projects, that’s .git/hooks. For our task we will use `post-commit` hook.
 
 
-`your-repository/.git/hooks/post-commit`
+`repository/.git/hooks/post-commit`
 
 {% highlight ruby%}
 
