@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Gitshoot, Fun with git post-commit hook and webcam" 
+author: "mribica"
 ---
 
 For quite some time now, I have this idea of creating collection of Gitshots. Basically, idea is to create git hook that will capture image 
