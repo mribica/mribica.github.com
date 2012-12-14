@@ -2,17 +2,18 @@
 layout: default
 ---
 
-<section class="content">
+<section class="postWrapper">
   <div class="postTitleWrapper">
     <a href="/" class="backArrow">&larr; Back to home</a>
-    <a href="{{ page.url }}" class="postTitle">{{ page.title }}</a>
+    <h1> <a href="{{ page.url }}" class="postTitle">{{ page.title }}</a> </h1>
   </div>
 
   <div class="postDateWrapper">
-    {{ page.date | date: "%B %e, %Y" }}
+    {{page.author}} / {{ page.date | date: "%B %e, %Y" }}
   </div>
 
   <div class="postContentWrapper">
     {{ content }}
   </div>
+  <a href="/" class="backArrow">&larr; Back to home</a>
 </section>

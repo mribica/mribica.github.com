@@ -1,16 +1,23 @@
 ---
 layout: post
 title: "Blogging for hackers with Jekyll and github" 
+author: "mribica"
 ---
 
-## Create github page
+## 1. Create github page
 
-Create github repository with name like **username.github.com**. In few minutes you will get mail that your github page is up and 
+Create github repository with name like `USERNAME.github.com`. In few minutes you will get mail that your github page is up and 
 available at username.github.com.
 
-## Install and configure Jekyll
+## 2. Install and configure Jekyll
 
-`gem install jekyll`
+> [Jekyll](https://github.com/mojombo/jekyll) is a simple, blog aware, static site generator. It takes a template directory 
+> (representing the raw form of a website), runs it through Textile or Markdown and Liquid converters, 
+> and spits out a complete, static website suitable for serving with Apache or your favorite web server. 
+
+{% highlight html %}
+$ gem install jekyll
+{% endhighlight %}
 
 ### Create basic jekyll directory structure
 
@@ -31,14 +38,14 @@ available at username.github.com.
 
 ### Create layout for your blog `_layouts/default.html`
 
-{% highlight html linenos %}
+{% highlight html%}
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>{{ "{{ page.title "}} }}</title>
+    <title>{{ "{{ page.title"}} }}</title>
   </head>
   <body>
-    {{ "{{ content "}} }}
+    {{ "{{ content"}} }}
   </body>
 </html>
 
@@ -46,46 +53,35 @@ available at username.github.com.
 
 ### Create layout for post `_layouts/post.html`
 
-{% highlight html linenos %}
+{% highlight html %}
 
-<section class="content">
-  <h1>
-    <a href=" {{ "{{ page.url "}} }} "> {{ "{{ page.title "}} }}</a>
-  </h1>
-
-  <section class="date">
-    {{ "{{ page.date | date: "%B %e, %Y" "}} }}
-  </section>
-
-  {{ "{{ content "}} }}
-
-</section>
+<h1> <a href="{{ "{{ page.url"}} }}" class="postTitle">{{ "{{ page.title"}} }}</a> </h1>
+{{ "{{ page.date | date: '%B %e, %Y'"}} }}
+{{ "{{ content"}} }}
 
 {% endhighlight %}
 
 ### Create `index.html`
 
-Blog homepage with post listing
+Blog homepage with posts list
 
-{% highlight html linenos %}
-<section class="content">
-  <ul>
-    {{ "{% for post in site.posts "}} %}
-    <li>
-      <span>{{ "{{ post.date | date: "%B %e, %Y" "}} }}</span> <a href="{{ "{{ post.url "}} }}">{{ "{{ post.title "}} }}</a>
-    </li>
-    {{" {% endfor "}} %}
-  </ul>
-</section>
+{% highlight html %}
+<ul>
+  {{ "{% for post in site.posts"}} %}
+  <li>
+    <span>{{ "{{ post.date | date: '%B %e, %Y'"}} }}</span> <a href="{{ "{{ post.url "}} }}">{{ "{{ post.title"}} }}</a>
+  </li>
+  {{" {% endfor"}} %}
+</ul>
 {% endhighlight %}
 
-## Write your first post
+## 3. Write your first post
 
-Create new post and save it to _posts directory. The format of these file is important, as named as `YEAR-MONTH-DAY-title.MARKUP`
+Create new post and save it to _posts named in this format `YEAR-MONTH-DAY-title.MARKUP`
 
-**2012-11-24-my-first-post.markdown**
+eg. `2012-11-24-my-first-post.markdown`
 
-{% highlight markdown linenos %}
+{% highlight markdown %}
 ---
 layout: post
 title: "Blogging for hackers with Jekyll and github" 
@@ -97,11 +93,11 @@ Content for the first post
 
 {% endhighlight %}
 
-## Run and deploy
+## 4. Run and deploy
 
-`~/mribica.github.com$ jekyll --server` will generate your blog. Now you can simply deploy it to github page with gitpush.
+{% highlight bash %}
+USERNAME.github.com$ jekyll --server
+{% endhighlight %}
 
-
-
-
-
+will generate your blog and start Webrick server. 
+Now you can check your blog at `localhost:3000` and if everything is ok push it to your `USERNAME.github.com` repository and your blog is deployed.
