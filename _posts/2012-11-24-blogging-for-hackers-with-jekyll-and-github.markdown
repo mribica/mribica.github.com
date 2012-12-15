@@ -100,5 +100,5 @@ USERNAME.github.com$ jekyll --server
 {% endhighlight %}
 
 will generate your blog and start Webrick server. 
-Now you can check your blog at `localhost:3000`. If everything is ok push it to your `USERNAME.github.com` repository and 
+Now you can check your blog at `localhost:4000`. If everything is ok push it to your `USERNAME.github.com` repository and 
 your blog is deployed.
