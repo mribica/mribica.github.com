@@ -9,7 +9,10 @@ Idea is to create git hook that will capture image from webcam on every git comm
 
 ## Capture image from command line
 
-For this purpose I used streamer(Ubuntu) `streamer -c /dev/video0 -b 16 -o filename.jpeg`
+For this purpose you can use:
+
+- streamer (Ubuntu) `streamer -c /dev/video0 -b 16 -o filename.jpeg`
+- imagesnap (OS X) `imagesnap filename.jpg`
 
 ## Git Hooks, post-commit
 
@@ -18,6 +21,8 @@ For this purpose I used streamer(Ubuntu) `streamer -c /dev/video0 -b 16 -o filen
 
 
 `repository/.git/hooks/post-commit`
+
+### Ubuntu version [(github gist)](https://gist.github.com/4297407)
 
 {% highlight ruby%}
 
@@ -34,4 +39,23 @@ exit 1
 
 {% endhighlight %}
 
+### OS X Version [(github gist)](https://gist.github.com/4297384)
+
+{% highlight ruby%}
+
+#!/usr/bin/env ruby
+puts "[Cheese!]"
+
+# Get some info about current commit
+repository_name = `basename "$PWD"`.chop
+commit_hash, commit_date = `git log -1 --pretty="%H%n%ci"`.split(/\r?\n/)
+
+# Capture image and save it to ~/Pictures/gitshoots/REPOSITORYNAME-TIMESTAMP-COMMITHASH.jpeg
+exec "imagesnap ~/Pictures/gitshoots/#{repository_name}_#{commit_date.gsub!(' ', '_')}_#{commit_hash}.jpeg"
+exit 1
+
+{% endhighlight %}
+
 And finaly make this script executable `repository$ sudo chmod +x .git/hooks/pre-commit`
+
+
