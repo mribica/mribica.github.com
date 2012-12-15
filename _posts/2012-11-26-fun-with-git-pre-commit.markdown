@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Gitshoot, Fun with git post-commit hook and webcam" 
+title: "Gitshot, Fun with git post-commit hook and webcam" 
 author: "mribica"
 ---
 
-For quite some time now, I have had this idea about collection of Gitshots. Basically. 
-Idea is to create git hook that will capture image from webcam on every git commit. And here it is, Gitshot.
+For quite some time now, I have had this idea about collection of Gitshots. Basically idea is to create 
+git hook that will capture image from webcam on every git commit. And here it is, Gitshot.
 
 ## Capture image from command line
 
@@ -33,8 +33,8 @@ puts "[Cheese!]"
 repository_name = `basename "$PWD"`.chop
 commit_hash, commit_date = `git log -1 --pretty="%H%n%ci"`.split(/\r?\n/)
 
-# Capture image and save it to ~/Pictures/gitshoots/REPOSITORYNAME-TIMESTAMP-COMMITHASH.jpeg
-exec "streamer -c /dev/video0 -b 16 -o ~/Pictures/gitshoots/#{repository_name}_#{commit_date.gsub!(' ', '_')}_#{commit_hash}.jpeg"
+# Capture image and save it to ~/Pictures/gitshots/REPOSITORYNAME-TIMESTAMP-COMMITHASH.jpeg
+exec "streamer -c /dev/video0 -b 16 -o ~/Pictures/gitshots/#{repository_name}_#{commit_date.gsub!(' ', '_')}_#{commit_hash}.jpeg"
 exit 1
 
 {% endhighlight %}
@@ -50,8 +50,8 @@ puts "[Cheese!]"
 repository_name = `basename "$PWD"`.chop
 commit_hash, commit_date = `git log -1 --pretty="%H%n%ci"`.split(/\r?\n/)
 
-# Capture image and save it to ~/Pictures/gitshoots/REPOSITORYNAME-TIMESTAMP-COMMITHASH.jpeg
-exec "imagesnap ~/Pictures/gitshoots/#{repository_name}_#{commit_date.gsub!(' ', '_')}_#{commit_hash}.jpeg"
+# Capture image and save it to ~/Pictures/gitshots/REPOSITORYNAME-TIMESTAMP-COMMITHASH.jpeg
+exec "imagesnap ~/Pictures/gitshots/#{repository_name}_#{commit_date.gsub!(' ', '_')}_#{commit_hash}.jpeg"
 exit 1
 
 {% endhighlight %}
