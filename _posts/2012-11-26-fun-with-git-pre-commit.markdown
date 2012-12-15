@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Gitshot, Fun with git post-commit hook and webcam" 
+title: "Gitshot, fun with git post-commit hook and webcam" 
 author: "mribica"
 ---
 
-For quite some time now, I have had this idea about collection of Gitshots. Basically idea is to create 
+For quite some time now, I have had this idea about collection of "gitshots". Basically idea is to create 
 git hook that will capture image from webcam on every git commit. And here it is, Gitshot.
 
 ## Capture image from command line
@@ -22,7 +22,7 @@ For this purpose you can use:
 
 `repository/.git/hooks/post-commit`
 
-### Ubuntu version [(github gist)](https://gist.github.com/4297407)
+### Ubuntu version [(github gist)](https://gist.github.com/4297617)
 
 {% highlight ruby%}
 
@@ -39,7 +39,7 @@ exit 1
 
 {% endhighlight %}
 
-### OS X Version [(github gist)](https://gist.github.com/4297384)
+### OS X Version [(github gist)](https://gist.github.com/4297623)
 
 {% highlight ruby%}
 
