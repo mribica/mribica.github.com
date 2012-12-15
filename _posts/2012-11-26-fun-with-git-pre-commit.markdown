@@ -56,6 +56,6 @@ exit 1
 
 {% endhighlight %}
 
-And finaly make this script executable `repository$ sudo chmod +x .git/hooks/pre-commit`
+And finally make this script executable `repository$ sudo chmod +x .git/hooks/pre-commit`
 
 
