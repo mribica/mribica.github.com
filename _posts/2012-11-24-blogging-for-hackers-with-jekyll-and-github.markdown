@@ -6,8 +6,8 @@ author: "mribica"
 
 ## 1. Create github page
 
-Create github repository with name like `USERNAME.github.com`. In few minutes you will get mail that your github page is up and 
-available at username.github.com.
+Create github repository with name in format `USERNAME.github.com`. In few minutes you will get email 
+that your github page is up and available at username.github.com.
 
 ## 2. Install and configure Jekyll
 
@@ -77,7 +77,7 @@ Blog homepage with posts list
 
 ## 3. Write your first post
 
-Create new post and save it to _posts named in this format `YEAR-MONTH-DAY-title.MARKUP`
+Create new post and save it to _posts with filename in format `YEAR-MONTH-DAY-title.MARKUP`
 
 eg. `2012-11-24-my-first-post.markdown`
 
@@ -100,4 +100,5 @@ USERNAME.github.com$ jekyll --server
 {% endhighlight %}
 
 will generate your blog and start Webrick server. 
-Now you can check your blog at `localhost:3000` and if everything is ok push it to your `USERNAME.github.com` repository and your blog is deployed.
+Now you can check your blog at `localhost:3000`. If everything is ok push it to your `USERNAME.github.com` repository and 
+your blog is deployed.
